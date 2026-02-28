@@ -8,8 +8,14 @@ public class Libro {
         this.titulo = titulo;
         this.autor = autor;
     }
+ 
+    
+    public String getTitulo() {
+		return titulo;
+	}
 
-    @Override
+
+	@Override
     public String toString() {
         return "Libro: " + titulo + " | Autor: " + autor;
     }
