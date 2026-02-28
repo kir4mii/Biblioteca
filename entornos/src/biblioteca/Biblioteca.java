@@ -15,4 +15,16 @@ public class Biblioteca {
             System.out.println(l);
         }
     }
+
+    public Libro buscarPorTitulo(String titulo) {
+        for (int i = 0; i < listaLibros.size(); i++) {
+            Libro l = listaLibros.get(i);
+            if (l.getTitulo().equalsIgnoreCase(titulo)) {
+                return l;
+            }
+        }
+        return null;
+    }
+
+
 }
