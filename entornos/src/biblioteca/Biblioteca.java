@@ -26,10 +26,26 @@ public class Biblioteca {
         return null;
     }
     
- 
     public void eliminarLibro(Libro l) {
         listaLibros.remove(l);
         System.out.println("Libro eliminado de la biblioteca.");
+    }
+
+    public boolean reservarLibro(String titulo) {
+        for (Libro l : listaLibros) {
+            if (l.getTitulo().equalsIgnoreCase(titulo)) {
+                if (!l.isReservado()) {
+                    l.setReservado(false);
+                    System.out.println("Libro reservado con éxito.");
+                    return true;
+                } else {
+                    System.out.println("El libro ya está reservado.");
+                    return false;
+                }
+            }
+        }
+        System.out.println("Libro no encontrado.");
+        return false;
     }
 
   
