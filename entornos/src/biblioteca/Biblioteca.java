@@ -25,6 +25,14 @@ public class Biblioteca {
         }
         return null;
     }
+    
+ 
+    public void eliminarLibro(Libro l) {
+        listaLibros.remove(l);
+        System.out.println("Libro eliminado de la biblioteca.");
+    }
+
+  
 
 
 }
